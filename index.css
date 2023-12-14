@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre:wght@700&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  height: 150%;
+}
+
+html,
+body {
+  min-height: 100vh;
+  color: var(--font-color);
+  background-image: linear-gradient(white, black);
+}
+
+main, nav, footer {
+  padding: 1em;
+  background-image: linear-gradient(white, white, grey);
+  border-radius: 1em; /*This rounds the corners of elements*/
+  margin-bottom: 1em; /*This places some space between elements*/
+}
+
+:root {
+  --spacing-1: 8px;
+  --spacing-2: 12px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+
+  --border-radius: 12px;
+
+  --font-color: #323232;
+}
+
+.heart {
+  color: red;
+}
+
+h2 {
+  font-family: "Proza Libre", sans-serif;
+  margin-left: 45%;
+  margin-bottom: var(--spacing-2);
+
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0 var(--spacing-3);
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3) 0;
+}
+
+.navigation-items {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  align-items: center;
+  margin: 0;
+  margin-left: auto;
+}
+
+.navigation-item {
+  margin: var(--spacing-1);
+}
+
+.portrait {
+  height: 300px;
+  width: 300px;
+  border-radius: 10%;
+  flex-shrink: 0;
+}
+
+.about-me-container {
+  display: flex;
+}
+
+.about-me-text-container {
+  margin-right: var(--spacing-3);
+}
+
+.project-image {
+  width: 50%;
+}
+
+.project-title h3 {
+  display: inline;
+}
+
+
+.project-card-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-card {
+  position: relative;
+  height: 200px;
+  width: 250px;
+  border: 1px black solid;
+}
+
+.project-card img {
+  max-width: 250px;
+  max-height: 200px;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  position: absolute;
+  bottom: 0;
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 15px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+details {
+  cursor: pointer;
+}
+
+summary {
+  list-style-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/right-arrow.svg);
+}
+
+footer {
+  margin-top: auto;
+  padding: var(--spacing-2) 0;
+  text-align: center;
+}
+
+section {
+  padding: var(--spacing-3) 0;
+}
+
+.icon {
+  font-size: 2em;
+  color: var(--font-color);
+  margin: 0 var(--spacing-1);
+}
+
+a {
+  color: var(--font-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#logo {
+  margin-left: 38%;
+}
+
+#skills-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#skills-container > * {
+  font-size: 2em;
+  width: 2em;
+  margin-top: var(--spacing-1);
+}
+
+@media only screen and (max-width: 600px) {
+  .about-me-container {
+    flex-direction: column;
+  }
+}
